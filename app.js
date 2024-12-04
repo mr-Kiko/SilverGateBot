@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-import fetch from 'node-fetch'; // تغییر به import برای node-fetch نسخه 3 به بالا
+const fetch = require('node-fetch');
 
 // توکن ربات تلگرام و آیدی گروه
 const TELEGRAM_BOT_TOKEN = 'bot7922421871:AAGOql7sR7bI8fQ-qdKpYgj0fD2dA7TkPBI';
