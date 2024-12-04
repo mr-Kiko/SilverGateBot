@@ -1,17 +1,18 @@
 const axios = require('axios');
+
 const botToken = '7922421871:AAGOql7sR7bI8fQ-qdKpYgj0fD2dA7TkPBI';  // توکن ربات شما
-const groupId = '-4173284707';  // شناسه گروه شما
+const groupId = '-4173284707'; // شناسه گروه شما
+const message = 'سلام';
 
-// بررسی اطلاعات گروه
-async function getGroupInfo() {
-  try {
-    const response = await axios.post(`https://api.telegram.org/bot${botToken}/getChat`, {
-      chat_id: groupId
-    });
-    console.log('اطلاعات گروه:', response.data);
-  } catch (error) {
-    console.error('خطا در دریافت اطلاعات گروه:', error);
-  }
-}
+const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-getGroupInfo();
+axios.post(url, {
+  chat_id: groupId,
+  text: message
+})
+.then(response => {
+  console.log('Message sent successfully:', response.data);
+})
+.catch(error => {
+  console.log('Error sending message:', error.response ? error.response.data : error.message);
+});
