@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const fetch = require('node-fetch');
+import fetch from 'node-fetch'; // تغییر به import برای node-fetch نسخه 3 به بالا
 
 // توکن ربات تلگرام و آیدی گروه
 const TELEGRAM_BOT_TOKEN = 'bot7922421871:AAGOql7sR7bI8fQ-qdKpYgj0fD2dA7TkPBI';
@@ -49,4 +49,4 @@ async function sendPriceToTelegram() {
 }
 
 // ارسال هر 10 ثانیه یکبار
-setInterval(sendPriceToTelegram, 10000); // برای تست، هر 10 ثانیه یکبار
+setInterval(sendPriceToTelegram, 43200000); // برای تست، هر 10 ثانیه یکبار
