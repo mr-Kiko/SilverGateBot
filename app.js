@@ -2,7 +2,7 @@ const axios = require('axios');
 const { Telegraf } = require('telegraf');
 
 // توکن ربات تلگرام و آیدی گروه
-const TELEGRAM_BOT_TOKEN = 'bot7922421871:AAGOql7sR7bI8fQ-qdKpYgj0fD2dA7TkPBI';
+const TELEGRAM_BOT_TOKEN = '7922421871:AAGOql7sR7bI8fQ-qdKpYgj0fD2dA7TkPBI';
 const GROUP_CHAT_ID = '-1002305142578'; // Chat ID of the group
 
 // آدرس سایت نقره
